@@ -109,7 +109,10 @@ section {
     background: #8A9A5B;
     color: white;
 }
-
+.contact-form{ 
+    width: 80px;
+    height: 30px;
+}
 .project-container {
     display: flex;
     justify-content: center;
@@ -209,7 +212,7 @@ footer {
         display: block;
     }
 }
-@media(max-width: 400px){
+@media(max-width: 300px){
     .sidebar{
         width: 100%;
     }
