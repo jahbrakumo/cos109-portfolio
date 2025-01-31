@@ -13,59 +13,38 @@ body {
 }
 
 /* Navigation */
-.navbar{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #8A9A5B;
     padding: 15px 20px;
     color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: white;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
 }
 
 .nav-links li {
-    display: inline;
+    margin: 0 15px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
-}
-.hamburger {
-    display: none;
-     font-size: 28px;
-     cursor: pointer;
-}
-@media(max-width:768) {
-    .nav-links {
-        display:none;
-        flex-direction:column ;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: mossgreen;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-    .nav-links.active {
-        display: flex;
-    }
-    .hamburger {
-        display: block;
-    }
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -129,7 +108,6 @@ section {
 #projects {
     background: #8A9A5B;
     color: white;
-    margin-top: 20px;
 }
 
 .project-container {
@@ -150,19 +128,7 @@ section {
 .project:hover {
     transform: translateY(-5px);
 }
-.form{
-    display: flex;
-    flex-direction: row-reverse;
-}
-form label{
-    margin: 80%;
-}
-form input,form textarea{
-    padding: 30px;
-    margin-bottom: 30px;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-}
+
 /* Fade-in Animation */
 .fade-in {
     opacity: 0;
@@ -207,8 +173,45 @@ footer {
         display: none;
         flex-direction: column;
     }
-
+}
     .menu-toggle {
         display: block;
     }
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: white;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
+.sidebar li{
+    width: 100%;
+    color: #4b5e3a;
+}
+.sidebar a {
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+@media(max-width: 800px){
+    .hideonMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+    

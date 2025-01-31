@@ -16,14 +16,11 @@ const fadeInOnScroll = () => {
         }
     });
 };
-
-window.addEventListener("scroll", fadeInOnScroll);
-window.addEventListener("load", fadeInOnScroll);
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
-
-    hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
-});
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display= 'flex'
+}
+function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display= 'none'
+}
